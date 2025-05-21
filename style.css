@@ -5,11 +5,13 @@ body {
     padding: 20px;
 }
 
-#contenedor-cuento {
+#contenedor-cuento, #seleccion-libro, #final {
     background: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px gray;
+    margin: auto;
+    max-width: 600px;
 }
 
 img {
@@ -39,25 +41,13 @@ img {
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
-    #contenedor-cuento {
-        max-width: 600px;
-        margin: auto;
-    }
-
-    img {
-        width: 300px;
-    }
-}
-
-#final {
-    text-align: center;
-}
-
-#reiniciar {
-    margin: 20px auto;
-    display: inline-block;
+button {
+    font-size: 20px;
+    margin: 10px;
     padding: 10px 20px;
-    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #ffca28;
+    border: none;
     cursor: pointer;
 }
+
