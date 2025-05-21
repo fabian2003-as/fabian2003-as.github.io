@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Leo y la estrella perdida</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="estrella.gif" />
+</head>
+<body onload="iniciarCuento()">
+
+    <div id="contenedor-cuento">
+        <h1>Leo y la estrella perdida</h1>
+        <img id="imagen" src="fondo.png" alt="Imagen animada" />
+        <p id="texto">¡Comencemos la aventura de Leo!</p>
+
+        <div class="botones">
+            <button onclick="anotarPuntos(1)">⭐</button>
+            <button onclick="anotarPuntos(2)">⭐⭐</button>
+            <button onclick="anotarPuntos(3)">⭐⭐⭐</button>
+        </div>
+
+        <button id="siguiente" onclick="siguienteParte()">Siguiente</button>
+    </div>
+
+    <div id="final" style="display:none;">
+        <h2 id="mensajeFinal"></h2>
+        <p id="puntajeFinal"></p>
+        <button id="reiniciar" onclick="reiniciarCuento()">Reiniciar cuento</button>
+        <img id="gifFinal" src="" alt="Gif final" style="width: 200px; margin-top: 20px;" />
+    </div>
+
+    <audio id="audioControl"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
