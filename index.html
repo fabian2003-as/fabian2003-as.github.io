@@ -2,16 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Leo y la estrella perdida</title>
+    <title>Lectura Interactiva</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="estrella.gif" />
 </head>
-<body onload="iniciarCuento()">
+<body>
+    <div id="seleccion-libro">
+        <h1>Elige un cuento</h1>
+        <button onclick="cargarLibro('leo')">📘 Leo y la estrella perdida</button>
+        <button onclick="cargarLibro('luna')">🌙 Luna y el secreto del bosque</button>
+        <button onclick="cargarLibro('marina')">🌊 Marina y el delfín brillante</button>
+    </div>
 
-    <div id="contenedor-cuento">
-        <h1>Leo y la estrella perdida</h1>
-        <img id="imagen" src="fondo.png" alt="Imagen animada" />
-        <p id="texto">¡Comencemos la aventura de Leo!</p>
+    <div id="contenedor-cuento" style="display: none;">
+        <h1 id="titulo-libro">Cuento</h1>
+        <img id="imagen" src="" alt="Imagen del cuento" />
+        <p id="texto">Texto aquí</p>
 
         <div class="botones">
             <button onclick="anotarPuntos(1)">⭐</button>
@@ -22,7 +28,7 @@
         <button id="siguiente" onclick="siguienteParte()">Siguiente</button>
     </div>
 
-    <div id="final" style="display:none;">
+    <div id="final" style="display: none;">
         <h2 id="mensajeFinal"></h2>
         <p id="puntajeFinal"></p>
         <button id="reiniciar" onclick="reiniciarCuento()">Reiniciar cuento</button>
@@ -30,7 +36,6 @@
     </div>
 
     <audio id="audioControl"></audio>
-
     <script src="script.js"></script>
 </body>
 </html>
